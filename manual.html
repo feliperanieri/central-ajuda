@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body class="manual">
+  <div class="container">
+    <article class="conteudo-manual bs">
+      <h1>1.1 Empresa (parâmetros)</h1>
+      <p>
+        A Empresa Principal é criada pelo Administrador <strong class="upper">make</strong>, mas os dados podem ser alterados pelo usuário que tiver acesso a alterar Empresa (Parâmetros).<br>
+        Para fazer alteração das informações e parametrizar os dados acesse:<br>
+        Menu > Administração > Estrutura Organizacional > Empresa (Parâmetros).
+      </p>
+      <p>
+        Clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/alterar.PNG?time=1468934804901" alt="botão alterar"> "alterar"
+      </p>
+      <figure>
+        <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934771250" alt="Tela do sistema. Alteração Empresa (parâmetros)">
+      </figure>
+
+      <h2>Visualização da tela</h2>
+      <figure>
+        <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_2.png?time=1468934875984" alt="Visualização completa da tela para alteração Empresa (parâmetros)">
+      </figure><br>
+      <p>
+        Faça as alterações e clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/gravar.PNG?time=1468934939117" alt="Exemplo do botão salvar do sistema"> "salvar"
+      </p>
+
+      <h2>Descrição dos parâmetros</h2>
+      <dl>
+        <dt>
+          Expira a sessão do usuário em
+        </dt>
+        <dd>
+          Caso o usuário não navegue pelo sistema durante o tempo estipulado a sessão é expirada e será necessário novo login. Este campo aceita o valor máximo de 60 minutos, é possível para o usuário alterar e reduzir este tempo.
+        </dd>
+
+        <dt>
+          Senha expira
+        </dt>
+        <dd>
+          Quando selecionado, a senha do usuário será expirada ao atingir 60 dias de uso. Para reativá-la, será necessário entrar em contato com o Usuário Responsável ou um Usuário com acesso completo ao Cadastro de Pessoas.
+        </dd>
+
+        <dt>
+          Seleção de cliente
+        </dt>
+        <dd>
+          Define se a seleção de clientes no sistema será por combo ou lupa
+        </dd>
+
+        <dt>
+          Nome do cadastro de entidades
+        </dt>
+        <dd>
+           Define o nome do cadastro de Entidades. Ex.: Clientes. Caso não esteja preenchido assume o padrão Entidade.
+        </dd>
+
+        <dt>
+          Calendário
+        </dt>
+        <dd>
+          Define o calendário que será utilizado pela empresa.
+        </dd>
+        <dt>
+          <abbr title="Uniform Resource Locator"lang="en" class="upper">url</abbr> botão sair
+        </dt>
+        <dd>
+          Permite o preenchimento de uma URL (Localizador Universal de Recursos), a ser chamada em caso de Logoff (Botão "Sair" do Menu). Ex. URL preenchida: "www.maestro.inf.br", ao sair do sistema pelo menu "Sair" a tela será redirecionada ao site www.maestro.inf.br.<br>
+          <strong>Obs.: É de responsabilidade do usuário o site escolhido para o redirecionamento.</strong>
+        </dd>
+        <dt>
+          Permite validar duplicidade de <abbr class="upper" title="Cadastro nacional de pessoa jurídica">cnpj</abbr>/<abbr class="upper" title="Cadastro nacional de pessoa física">cpf</abbr>
+        </dt>
+        <dd>
+          Não permite que sejam incluídos dois Clientes/Unidades com o mesmo <span class="upper">cnpj</span>/<span class="upper">cpf</span>. Quando o <span class="upper">cnpj</span>/<span class="upper">cpf</span> preenchido já estiver cadastrado no sistema, não será permitido gravar.
+        </dd>
+        <dt>
+          Obrigatório preenchimento e validação do <span class="upper">cnpj</span>/<span class="upper">cpf</span>de Cliente
+        </dt>
+        <dd>
+          Não permite que um cadastro de cliente seja gravado sem <span class="upper">cnpj</span>/<span class="upper">cpf</span>ou inválido.
+        </dd>
+        <dt>
+          Obrigatório preenchimento do Telefone 1
+        </dt>
+        <dd>
+          Quando selecionado, não permite gravar o cadastro do cliente sem o campo "Telefone 1" preenchido.
+        </dd>
+        <dt>
+          Obrigatório preenchimento do E-mail
+        </dt>
+        <dd>
+          Quando selecionado, não permite gravar o cadastro do cliente sem o campo "E-mail" preenchido.
+        </dd>
+        <dt>
+          Obrigatório preenchimento e validação do <span class="upper">cnpj</span>/<span class="upper">cpf</span> de Unidade
+        </dt>
+        <dd>
+          Não permite que um cadastro de unidade seja gravado sem <span class="upper">cnpj</span>/<span class="upper">cpf</span> ou inválido.<br>
+          <strong>Obs.: Os Clientes/Unidades já cadastrados com ou sem <span class="upper">cnpj</span>/<span class="upper">cpf</span>, permanecerão da mesma forma. Os parâmetros acima só valerão para os mesmos, se o <span class="upper">cnpj</span>/<span class="upper">cpf</span> for alterado.</strong>
+        </dd>
+        <dt>
+          Valida Processos em Andamento
+        </dt>
+        <dd>
+          Quando selecionado, se houver um processo em andamento não será possível fazer alterações na tela de Mapear Processos.
+        </dd>
+      </dl>
+      <p>
+        Clique no ícone <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/empresa_pa.png?time=1468935080917" alt="Exemplo de botão Parâmetros da empresa no sistema"> "Parâmetros da empresa"
+      </p>
+      <figure>
+        <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934939117" alt="Exemplo de tela Parâmetros da empresa">
+      </figure><br>
+      <p>
+        Clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/alterar.PNG?time=1468934804901" alt="botão alterar"> "alterar"
+      </p>
+      <figure>
+        <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_3.png?time=1468935203441" alt="Exemplo tela de edição Parâmetros da empresa">
+      </figure><br>
+
+      <h2>Descrição dos campos</h2>
+      <dl>
+        <dt>
+          Código da Divisão Cliente Padrão
+        </dt>
+        <dd>
+           Permite selecionar uma Divisão no combo "Divisão Padrão para Cliente". Essa divisão será utilizada quando na inclusão de um Cliente, o usuário que irá incluí-lo estiver relacionado a "Todas as Divisões" no combo Cliente da tela de Configuração Padrão por Divisão. Nesse caso a divisão que será relacionada automaticamente ao cliente será a divisão padrão para cliente.
+        </dd>
+        <dt>
+          Utiliza Login Automático
+        </dt>
+        <dd>
+          Quando selecionado, será possível aos usuários da empresa possuírem um Token que lhes permitirá acessar o sistema sem que seja necessário utilizar login e senha.
+        </dd>
+      </dl>
+
+      <p>
+        Para conhecer a funcionalizade do ícone Logo da Empresa, clique aqui
+      </p>
+    </article>
+  </div>
+  <div class="fab-container">
+    <div class="top fab" tooltip="Voltar ao início"></div>
+  </div>
+
+  <script>
+  var pxScrolled = 200;
+  var duration = 500;
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > pxScrolled) {
+      $('.fab-container').css({'bottom': '0px', 'display': 'block', 'transition': '.3s'});
+    } else {
+      $('.fab-container').css({'bottom': '-72px', 'displa': 'none'});
+    }
+  });
+  $('.top').click(function() {
+    $('body').animate({scrollTop: 0}, duration);
+  });
+  </script>
+</body>
+</html>

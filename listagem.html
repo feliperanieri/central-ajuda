@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header bs">
+    <h1>Central de Ajuda</h1>
+    <p>
+      Confira os manuais do <strong>Maestro</strong>, navegue pelas dúvidas frequentes,<br>importe processos e faça download de boletins.
+    </p>
+  </div>
+  <div class="container">
+    <ol class="lista-manual">
+      <li>
+        <span>
+          1. Administração / Estrutura Organizacional
+        </span>
+        <ol class="itens-manual">
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              1.1 - Empresa (Parâmetro)
+            </a>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <span>
+          2. Administração / Pessoas / Acessos
+        </span>
+        <ol class="itens-manual">
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              2.1 - Cadastrar pessoas
+            </a>
+          </li>
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              2.2 - Pessoas - ícone período de ausência
+            </a>
+          </li>
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              2.3 - Quadros personalizados
+            </a>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <span>
+          3. Central de ajuda
+        </span>
+        <ol class="itens-manual">
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              3.1 - Central de ajuda
+            </a>
+          </li>
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              3.2 - Base de processos
+            </a>
+          </li>
+          <li>
+            <a href="manual.html" title="Clique para ler o conteúdo deste manual">
+              3.3 - Regras para download e upload
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <script>
+  $(function() {
+    $(".lista-manual > *").click(function() {
+      $(".active > .itens-manual").slideUp("fast");
+      $(".lista-manual > *").removeClass("active");
+      $(this).addClass("active");
+      $(".active > .itens-manual").slideDown("fast");
+    });
+  });
+  </script>
+</body>
+</html>
