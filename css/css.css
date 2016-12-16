@@ -1,23 +1,28 @@
 body{margin:0; padding:0;}
 body.manual{background:#f0f0f0;}
-a{color:#4a4a4a}
+a, a:hover{color:#4a4a4a}
 ul, ol{list-style: none;}
 dd{margin-bottom:10px;}
+input.form-control::-webkit-input-placeholder{font-style: italic;}
+input.form-control::-moz-placeholder{font-style: italic;}
+input.form-control:-ms-input-placeholder{font-style: italic;}
 
 
-.bs{box-shadow:0 1px 5px #888888;}
+.shadow{box-shadow:0 1px 5px #888888;}
 .upper{text-transform: uppercase;}
 .lower{text-transform: lowercase;}
 .box-help{border-bottom:2px solid #EEE; min-height: 140px; margin-top:20px; color:#4a4a4a; position: relative;}
-.box-help h2{position:relative; top:25px;}
 .box-help:hover{background:linear-gradient(#FFF, #f0f0f0);}
 .box-help:hover i{opacity: .6}
 .box-help a:hover{text-decoration: none; opacity: .8}
+.link-listagem{display: block;width: 100%;height: 100%;position:absolute; z-index: 10;text-indent:-99999px; outline: 0;}
 .ver-todos{font-size:.8em; position:absolute; right:10px; bottom:10px; font-weight: bold;}
-.most-accessed h2{top:0}
 .fa{float:left; margin: 20px; font-size:5em; color:#7c7c3f;}
 
 .header{background:linear-gradient(#FFF, #f0f0f0);text-align:center; padding: 60px;}
+.header h1{font-size:3em;}
+.header .form-group{width:50%; margin: 0 auto;}
+.logo-maestro{width:15%; margin:0 0 10px 0}
 
 /** lista de manuais **/
 .lista-manual{font-size:12pt;margin: 0;padding: 0; cursor:pointer; margin: 20px 0 0 0}
@@ -65,4 +70,10 @@ h2{font-size:1.7em}
 .box-help > *{float:unset; min-height: unset; position: unset; list-style:none;}
 .box-help > ul,.box-help > ul li{margin: 0;padding:0}
 .box-help h2{margin:0;}
+.header h1{font-size:2.3em;}
+.logo-maestro{width:50%;}
+.header .form-group{width:100%;}
+.header p{font-size:.9em}
+.header p br{display:none}
+.lista-manual > li{font-size:.9em; letter-spacing: 0;}
 }
