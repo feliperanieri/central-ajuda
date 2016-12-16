@@ -154,7 +154,6 @@
 
   <script>
   var pxScrolled = 200;
-  var duration = 500;
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > pxScrolled) {
@@ -164,7 +163,7 @@
     }
   });
   $('.top').click(function() {
-    $('body').animate({scrollTop: 0}, duration);
+    $('body').animate({scrollTop: 0}, 500);
   });
   </script>
 </body>
