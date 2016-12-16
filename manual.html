@@ -159,11 +159,12 @@
     if ($(this).scrollTop() > pxScrolled) {
       $('.fab-container').css({'bottom': '0px', 'display': 'block', 'transition': '.3s'});
     } else {
-      $('.fab-container').css({'bottom': '-72px', 'displa': 'none'});
+      $('.fab-container').css({'bottom': '-72px', 'display': 'none'});
     }
   });
   $('.top').click(function() {
-    $('body').animate({scrollTop: 0}, 500);
+    //$('body').animate({scrollTop: 0}, 500);
+    $('body > html').animate({scrollTop: 0}, "fast");
   });
   </script>
 </body>
