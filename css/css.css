@@ -1,5 +1,6 @@
-body{margin:0; padding:0;}
+body{margin:0; padding:0; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
 body.manual{background:#f0f0f0;}
+body.manual h1{font-size:2em; border-bottom:1px solid #CCC; padding: 0 0 10px 0}
 a, a:hover{color:#4a4a4a}
 ul, ol{list-style: none;}
 dd{margin-bottom:10px;}
@@ -7,7 +8,8 @@ input.form-control::-webkit-input-placeholder{font-style: italic;}
 input.form-control::-moz-placeholder{font-style: italic;}
 input.form-control:-ms-input-placeholder{font-style: italic;}
 
-
+.fl{float:left;}
+.fr{float:right;}
 .shadow{box-shadow:0 1px 5px #888888;}
 .upper{text-transform: uppercase;}
 .lower{text-transform: lowercase;}
@@ -22,7 +24,7 @@ input.form-control:-ms-input-placeholder{font-style: italic;}
 .header{background:linear-gradient(#FFF, #f0f0f0);text-align:center; padding: 60px;}
 .header h1{font-size:3em;}
 .header .form-group{width:50%; margin: 0 auto;}
-.logo-maestro{width:15%; margin:0 0 10px 0}
+.logo-maestro{width:10%; margin:0 0 10px 0; position: absolute; top: 10px; left: 0;}
 
 /** lista de manuais **/
 .lista-manual{font-size:12pt;margin: 0;padding: 0; cursor:pointer; margin: 20px 0 0 0}
@@ -30,9 +32,16 @@ input.form-control:-ms-input-placeholder{font-style: italic;}
 .lista-manual > li span{border-bottom: 1px solid #4f4f28;height: 25px;width: 98%;margin:0 0 0 20px;padding:10px 0 25px 25px; display:inline-block;}
 .lista-manual ol{margin:5px 0 0 0; display: none;}
 .lista-manual a{font-size:.9em;letter-spacing: 0;}
-.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0}
-.conteudo-manual figure{width: 100%;}
-.conteudo-manual figure img{width: 100%}
+
+/** manual íntegra **/
+.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0;}
+.conteudo-manual figure{width: 100%; margin: 0 0 10px 0;}
+.conteudo-manual figure .ilustra-tela{width: 100%}
+.manual section {border-right: 1px solid #CCC;}
+.manual aside ol{padding: 0; margin: 0;}
+.manual aside ol li{border-bottom:1px solid #EEE; padding: 10px 0 10px 10px; margin: 10px 0 -10px 0; transition: .3s}
+.manual aside ol li:hover{background:#EEE; transition: .3s}
+.manual aside ol li:hover a{text-decoration: none; }
 
 /** fab button **/
 .fab-container {
@@ -76,4 +85,6 @@ h2{font-size:1.7em}
 .header p{font-size:.9em}
 .header p br{display:none}
 .lista-manual > li{font-size:.9em; letter-spacing: 0;}
+.manual section{border: none;}
+.manual aside{display: none;}
 }
