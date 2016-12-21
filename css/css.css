@@ -42,7 +42,7 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
 .manual section {border-right: 1px solid #CCC;}
 .manual aside h4{font-size: 1.1em; color:#4a4a4a; border-bottom:1px solid #CCC; padding:0 0 10px 0; margin:34px 0 0 0}
 .manual aside ol{padding: 0; margin: 0;}
-.manual aside ol li{border-bottom:1px solid #EEE; padding: 10px 0 10px 10px; margin: 10px 0 -10px 0; transition: .3s}
+.manual aside ol li{border-bottom:1px solid #EEE; padding:10px 0 10px 10px; margin:10px 0 -10px 0; transition: .3s}
 .manual aside ol li:hover{background:#EEE; transition: .3s}
 .manual aside ol li:hover a{text-decoration: none; }
 

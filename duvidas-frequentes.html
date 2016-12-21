@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header shadow">
+    <h1>Central de Ajuda</h1>
+    <h2>Dúvidas frequentes</h2>
+    <div class="form-group">
+      <input type="search" class="form-control" placeholder="Busque pelo conteúdo completo da Central de Ajuda do Maestro">
+    </div>
+  </div>
+  <div class="container">
+    <ol class="lista-manual">
+      <li>
+        <span>
+          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          1. Qual a diferença entre WorkFlow e FollowUp?
+        </span>
+        <ol class="itens-manual">
+          <li>
+      	   FollowUp: Significa buscar uma resposta para algo que foi requisitado, solicitado. Quando se faz o "follow up" você está buscando um retorno do que foi questionado e que ainda não obteve resposta. O processo Follow Up permite definir uma data retorno, onde o sistema irá gerar uma pendencia para você no dia informado. WorkFlow: É a modelização e a gestão do conjunto das tarefas à realizar, de acordo com um conjunto de regras definidas e seus respectivos atores. O processo Work Flow possibilita a criação de uma sequencia de tarefas a serem executadas por seus executores.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>
+          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          2. Onde é definido qual tipo de cliente faz parte do processo?
+        </span>
+        <ol class="itens-manual">
+          <li>
+            Através do parâmetro "Controla Clientes" é possível definir qual tipo de cliente faz parte do processo. Para isto realize o seguinte procedimento: - Menu > Cadastro > Processos > Mapear Processos - Selecione o Processo - Clique no ícone "Formulário" - Habilite o parâmetro "Controla Clientes" Obs: Ao selecionar o parâmetro citado acima sera aberto um novo campo para selecionar o tipo de cliente.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>
+          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          3. É possível alterar um formulário já preenchido?
+        </span>
+        <ol class="itens-manual">
+          <li>
+            Sim, porém somente o Gestor ou Usuário Responsável poderão alterar os formulários já preenchidos. Para isso realize o seguinte procedimento: - Menu > Cadastro > Processos > Mapear Processos - Selecione o Processo - Clique no ícone "Formulário" - Habilite o parâmetro: Permite Gestor Alterar Formulário (Gestor do Processo / Gestor da Divisão / Usuário Responsável)
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>
+          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          4. O que são regras para aprovação?
+        </span>
+        <ol class="itens-manual">
+          <li>
+            Regra de aprovação é uma condição que criamos para permitir que o sistema defina qual sera a próxima tarefa a ser executada baseada no formulário. IMPORTANTE: As regras podem ser configuradas por Tarefa ou por Executor, ou seja, podemos criar uma condição para definir qual a próxima tarefa e/ou qual executor irá realiza-la.
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <script>
+  $(function() {
+    $(".lista-manual > *").click(function() {
+      $(".active > .itens-manual").slideUp("fast");
+      $(".lista-manual > *").removeClass("active");
+      $(this).addClass("active");
+      $(".active > .itens-manual").slideDown("fast");
+    });
+  });
+  </script>
+</body>
+</html>
