@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header shadow">
+    <h1>Central de Ajuda</h1>
+    <h2>Dicas</h2>
+    <div class="form-group">
+      <input type="search" class="form-control" placeholder="Busque pelo conteúdo completo da Central de Ajuda do Maestro">
+    </div>
+  </div>
+  <div class="container">
+    <ol class="lista-manual">
+      <li>
+        <span>
+          <i class="fa fa-comment" aria-hidden="true"></i>
+          1. Teclas de atalho
+        </span>
+        <ol class="itens-manual">
+          <li>
+      	   O Maestro possui Teclas de Atalhos. Passe o cursor do mouse sobre um ícone, por exemplo, ícone "Incluir" na tela Tarefas/Processos/Processo a letra que estiver sublinhada (no caso, a letra N) será a letra a ser utilizada no atalho. Então em seu teclado, aperte as teclas: Alt + Shift+ Letra Sublinhada.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>
+          <i class="fa fa-comment" aria-hidden="true"></i>
+          2. Atalhos na tela inicial
+        </span>
+        <ol class="itens-manual">
+          <li>
+            Ao utilizar o atalho da tela inicial a sessão do usuário é reiniciada.
+          </li>
+      </li>
+    </ol>
+  </div>
+  <script>
+  $(function() {
+    $(".lista-manual > *").click(function() {
+      $(".active > .itens-manual").slideUp("fast");
+      $(".lista-manual > *").removeClass("active");
+      $(this).addClass("active");
+      $(".active > .itens-manual").slideDown("fast");
+    });
+  });
+  </script>
+</body>
+</html>
