@@ -60,7 +60,7 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
 /* cards */
 .cards{padding:20px; max-height:210px; position: relative;}
 .detail{position: absolute; border-bottom:3px solid #7c7c3f; bottom: 0; left:0px; display:block; width: 0%; transition: .2s}
-.cards:hover{box-shadow:0 1px 5px #888888; transition: .4s}
+.box-help:hover, .cards:hover{box-shadow:0 1px 5px #888888; transition: .4s}
 .box-help:hover .detail, .cards:hover .detail{width: 100%; transition: .4s;}
 .cards h2{font-size:1.5em; margin:0; padding:0; color:#7c7c3f}
 .cards .fa{font-size: 1em; margin: 0 10px 0 0; padding: 0}
