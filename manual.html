@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/css.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body class="manual">
   <div class="container">
@@ -22,17 +23,23 @@
           Menu > Administração > Estrutura Organizacional > Empresa (Parâmetros).
         </p>
         <figure>
+          <i class="fa fa-search-plus"></i>
           <figcation>
             Clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/alterar.PNG?time=1468934804901" alt="botão alterar"> "alterar"
           </figcaption>
-          <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934771250" alt="Tela do sistema. Alteração Empresa (parâmetros)" class="ilustra-tela">
+          <i class="pop">
+            <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934771250" alt="Tela do sistema. Alteração Empresa (parâmetros)" class="ilustra-tela">
+          </i>
         </figure>
 
         <figure>
+          <i class="fa fa-search-plus"></i>
           <figcaption>
             Faça as alterações e clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/gravar.PNG?time=1468934939117" alt="Exemplo do botão salvar do sistema"> "salvar"
           </figcaption>
-          <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_2.png?time=1468934875984" alt="Visualização completa da tela para alteração Empresa (parâmetros)" class="ilustra-tela">
+          <i class="pop">
+            <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_2.png?time=1468934875984" alt="Visualização completa da tela para alteração Empresa (parâmetros)" class="ilustra-tela">
+          </i>
         </figure>
 
         <h2>Descrição dos parâmetros</h2>
@@ -118,16 +125,22 @@
         </dl>
 
         <figure>
+          <i class="fa fa-search-plus"></i>
           <figcaption>
             Clique no ícone <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/empresa_pa.png?time=1468935080917" alt="Exemplo de botão Parâmetros da empresa no sistema"> "Parâmetros da empresa"
           </figcaption>
-          <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934939117" alt="Exemplo de tela Parâmetros da empresa" class="ilustra-tela">
+          <i class="pop">
+            <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa.png?time=1468934939117" alt="Exemplo de tela Parâmetros da empresa" class="ilustra-tela">
+          </i>
         </figure><br>
         <figure>
+          <i class="fa fa-search-plus"></i>
           <figcaption>
             Clique em <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/alterar.PNG?time=1468934804901" alt="botão alterar"> "alterar"
           </figcaption>
-          <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_3.png?time=1468935203441" alt="Exemplo tela de edição Parâmetros da empresa" class="ilustra-tela">
+          <i class="pop">
+            <img src="https://www.maestro.inf.br/estatico/visitnet/upload/manual/46/a_empresa_3.png?time=1468935203441" alt="Exemplo tela de edição Parâmetros da empresa" class="ilustra-tela">
+          </i>
         </figure><br>
 
         <h2>Descrição dos campos</h2>
@@ -170,19 +183,40 @@
   <div class="fab-container">
     <div class="top fab" tooltip="Voltar ao início"></div>
   </div>
-  <script>
-  var pxScrolled = 200;
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > pxScrolled) {
-      $('.fab-container').css({'bottom': '0px', 'display': 'block', 'transition': '.3s'});
-    } else {
-      $('.fab-container').css({'bottom': '-72px', 'display': 'none'});
-    }
-  });
-  $('.top').click(function() {
-    $('body').animate({scrollTop: 0}, 500);
-  });
+  <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <img src="" class="imagepreview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var pxScrolled = 200;
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > pxScrolled) {
+        $('.fab-container').css({'bottom': '0px', 'display': 'block', 'transition': '.3s'});
+      } else {
+        $('.fab-container').css({'bottom': '-72px', 'display': 'none'});
+      }
+    });
+    $('.top').click(function() {
+      $('body').animate({scrollTop: 0}, 500);
+    });
+
+    $(function() {
+      if($(window).width() > 768){
+    		$('.pop').on('click', function() {
+    			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+    			$('#imagemodal').modal('show');
+    		});
+      }
+    });
   </script>
 </body>
 </html>

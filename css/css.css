@@ -4,9 +4,10 @@ body.manual h1{font-size:2em; border-bottom:1px solid #CCC; padding: 0 0 10px 0}
 a, a:hover{color:#4a4a4a}
 ul, ol{list-style: none;}
 dd{margin-bottom:10px;}
-input.form-control::-webkit-input-placeholder{font-style: italic; text-align: center;}
-input.form-control::-moz-placeholder{font-style: italic; text-align: center}
-input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
+abbr{text-decoration: none !important; border: none !important; cursor: inherit !important}
+input.form-control::-webkit-input-placeholder{font-style: italic; text-align: center; color:#999}
+input.form-control::-moz-placeholder{font-style: italic; text-align: center; color:#999}
+input.form-control:-ms-input-placeholder{font-style: italic; text-align: center; color:#999}
 
 .truncate{
   display: block; /* non-webkit style */
@@ -32,9 +33,10 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
 .fa{float:left; margin: 20px; font-size:5em; color:#7c7c3f;}
 
 .header{background:linear-gradient(#FFF, #f0f0f0);text-align:center; padding: 60px;}
-.header h1{font-size:3em;}
-.header h2{margin:10px 0;}
-.header .form-group{width:50%; margin: 0 auto;}
+.header h1{font-size:2.5em; color:#7c7c3f;}
+.header h2{margin:10px 0; color:#7c7c3f;}
+.header .form-group{width:50%; margin: 0 auto; position: relative;}
+.header .form-group .fa{font-size: 1.2em; color:#999; position: absolute; bottom:-10px; right:0}
 .boletins .header{margin-bottom:20px;}
 
 /** lista de manuais **/
@@ -47,10 +49,13 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
 .lista-manual .data-download{font-size:.9em; letter-spacing: 0; font-weight: normal}
 
 /** manual íntegra **/
-.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0;}
+.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0; position:relative; }
 .conteudo-manual figure{width: 100%; margin: 0 0 10px 0;}
-.conteudo-manual figure .ilustra-tela{width: 100%}
+.conteudo-manual figure .ilustra-tela{width: 100%;}
 .manual section {border-right: 1px solid #CCC;}
+.conteudo-manual aside{position: absolute; right: 0;top: 0;}
+.conteudo-manual aside h4, .conteudo-manual aside ol{position: fixed;}
+.conteudo-manual aside ol{top: 80px}
 .manual aside h4{font-size: 1.1em; color:#4a4a4a; border-bottom:1px solid #CCC; padding:0 0 10px 0; margin:34px 0 0 0}
 .manual aside ol{padding: 0; margin: 0;}
 .manual aside ol li{border-bottom:1px solid #EEE; padding:10px 0 10px 10px; margin:10px 0 -10px 0; transition: .3s}
@@ -91,6 +96,16 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center}
     transition: .3s;
 }
 
+/** modal img style **/
+.imagepreview{width: 100%;}
+.pop{cursor: pointer;}
+.manual .modal-dialog{width: 996px;}
+figure{position: relative;}
+figure .fa{width: 100px; height: 76px; text-align: center; position: absolute; top:50%; left:50%;margin-top: -38px; margin-left:-50px;z-index: -1;}
+figure:hover .ilustra-tela{opacity:.5; transition: .3s; position: relative; z-index: 2}
+figure:hover .fa{z-index: 1; transition:.4s;}
+
+
 
 @media only screen and (min-width: 1024px) {
 .fa{font-size:6em;}
@@ -103,14 +118,20 @@ h2{font-size:1.7em}
 @media only screen and (max-width: 768px) {
 .box-help{text-align:center; min-height: 200px;}
 .box-help > *{float:unset; min-height: unset; position: unset; list-style:none;}
-.box-help > ul,.box-help > ul li{margin: 0;padding:0}
+.box-help > ul, .box-help > ul li{margin: 0;padding:0}
 .box-help h2{margin:0;}
-.header h1{font-size:2.3em;}
+.header h1{font-size:1.7em;}
 .logo-maestro{width:50%;}
 .header .form-group{width:100%;}
 .header p{font-size:.9em}
 .header p br{display:none}
 .lista-manual > li{font-size:.9em; letter-spacing: 0;}
-.manual section{border: none;}
-.manual aside{display: none;}
+.manual section{border:none;}
+.manual aside{display:none;}
+figure .fa{display: none;}
+figure:hover .ilustra-tela{opacity:unset; transition: unset;}
+}
+@media only screen and (width: 320px) {
+.header {padding: 25px;}
+.header h1{font-size:1.8em;}
 }
