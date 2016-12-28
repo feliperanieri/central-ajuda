@@ -8,7 +8,7 @@ abbr{text-decoration: none !important; border: none !important; cursor: inherit 
 input.form-control::-webkit-input-placeholder{font-style: italic; text-align: center; color:#999}
 input.form-control::-moz-placeholder{font-style: italic; text-align: center; color:#999}
 input.form-control:-ms-input-placeholder{font-style: italic; text-align: center; color:#999}
-
+.clearfix{clear:both;}
 .truncate{
   display: block; /* non-webkit style */
   display: -webkit-box;
@@ -23,18 +23,18 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center;
 .shadow{box-shadow:0 1px 5px #888888;}
 .upper{text-transform: uppercase;}
 .lower{text-transform: lowercase;}
+h2{color: #7c7c3f;}
 .box-help{/*border-bottom:2px solid #EEE;*/ min-height: 140px; margin-top:20px; color:#4a4a4a; position: relative;}
 /*.box-help:hover{background:linear-gradient(#FFF, #f0f0f0);}*/
 /*.box-help:hover i{opacity: .6}*/
 .box-help a:hover{text-decoration: none; opacity: .8}
-.box-help h2{color: #7c7c3f;}
 .link-listagem{display: block;width: 100%;height: 100%;position:absolute; z-index: 10;text-indent:-99999px; outline: 0;}
 .ver-todos{font-size:.8em; position:absolute; right:10px; bottom:10px; font-weight: bold;}
 .fa{float:left; margin: 20px; font-size:5em; color:#7c7c3f;}
 
 .header{background:linear-gradient(#FFF, #f0f0f0);text-align:center; padding: 60px;}
 .header h1{font-size:2.5em; color:#7c7c3f;}
-.header h2{margin:10px 0; color:#7c7c3f;}
+.header h2{margin:10px 0;}
 .header .form-group{width:50%; margin: 0 auto; position: relative;}
 .header .form-group .fa{font-size: 1.2em; color:#999; position: absolute; bottom:-10px; right:0}
 .boletins .header, .processos .header{margin-bottom:20px;}
@@ -68,7 +68,7 @@ input.form-control:-ms-input-placeholder{font-style: italic; text-align: center;
 .detail{position: absolute; border-bottom:3px solid #7c7c3f; bottom: 0; left:0px; display:block; width: 0%; transition: .2s}
 .box-help:hover, .cards:hover{box-shadow:0 1px 5px #888888; transition: .4s}
 .box-help:hover .detail, .cards:hover .detail{width: 100%; transition: .4s;}
-.cards h2{font-size:1.5em; margin:0; padding:0; color:#7c7c3f}
+.cards h2{font-size:1.5em; margin:0; padding:0;}
 .cards .fa{font-size: 1em; margin: 0 10px 0 0; padding: 0}
 .cards small{display: block; margin: 5px 0; color:#999}
 .cards .btn-default:hover{background: #7c7c3f; color: #FFF; transition: .3s}
@@ -109,6 +109,29 @@ figure:hover .ilustra-tela{opacity:.5; transition: .3s; position: relative; z-in
 figure:hover .fa{z-index: 1; transition:.4s;}
 
 
+/*** videos ***/
+.container-videos{width: 80%;margin: 0 auto;}
+.video{height:400px;}
+.container-videos ul li{height: 100px;}
+.container-videos ul li figure{width: 100px; height: 60px; border:1px solid #CCC;margin: 0 5px 5px 0; float:left; position: relative;}
+.container-videos ul li img{width: 100%; height: 100%; transition: .3s}
+.container-videos ul li h3{color:#7c7c3f; margin: 0; padding: 0; font-size:1em; font-weight: bold;}
+.container-videos ul li .categoria{font-style: italic; color:#999}
+.container-videos ul li .fa{position: absolute; top: 30%; left: 0; font-size: 2em;  transition: .3s}
+.container-videos ul li:hover figure{cursor:pointer;}
+.container-videos ul li:hover figure img{opacity: .5; transition: .2s}
+
+.container-videos ul li, .por-categoria ul li{font-size:12px;}
+
+.por-categoria{padding-bottom: 20px;}
+.por-categoria h2{border-bottom:1px solid #CCC; padding: 0 0 10px 0; font-size:1.5em}
+.por-categoria h4{font-size:1em; padding: 0; margin: 0; color: #7c7c3f; font-weight: bold;}
+.por-categoria ul{padding: 0;}
+.por-categoria ul figure{width: 100%; height: 100px; display: block; border:1px solid #CCC; position: relative; transition: .3s}
+.por-categoria ul li{height: 170px;}
+.por-categoria ul li .fa{position: absolute; top: 30%; left: 20%; font-size: 4em;  transition: .3s}
+.por-categoria ul li:hover figure{cursor:pointer;}
+.por-categoria ul li:hover figure img{opacity: .5; transition: .2s}
 
 @media only screen and (min-width: 1024px) {
 .fa{font-size:6em;}
@@ -118,6 +141,7 @@ h2{font-size:1.5em}
 .cards{max-height:260px;}
 .cards-ilustrado{max-height: 326px;}
 .cards h2{font-size:1.2em;}
+.container-videos{width: 100%}
 }
 @media only screen and (max-width: 768px) {
 .box-help{text-align:center; min-height: 200px;}
