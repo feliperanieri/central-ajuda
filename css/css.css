@@ -142,6 +142,10 @@ h2{font-size:1.5em}
 .cards-ilustrado{max-height: 326px;}
 .cards h2{font-size:1.2em;}
 .container-videos{width: 100%}
+.por-categoria ul li{height: 140px;}
+.por-categoria ul figure{height: 70px;}
+.por-categoria ul figure{height: 70px;}
+.por-categoria ul li .fa{top: 28%; left: 8%; font-size: 3em;  transition: .3s}
 }
 @media only screen and (max-width: 768px) {
 .box-help{text-align:center; min-height: 200px;}
