@@ -147,6 +147,11 @@ h2{font-size:1.5em}
 .por-categoria ul figure{height: 70px;}
 .por-categoria ul li .fa{top: 28%; left: 8%; font-size: 3em;}
 }
+@media only screen and (width: 768px) {
+.video{width: 100%; height:400px !important;}
+.por-categoria ul li{width: 50% !important; float:left !important}
+}
+
 @media only screen and (max-width: 768px) {
 .box-help{text-align:center; min-height: 200px;}
 .box-help > *{float:unset; min-height: unset; position: unset; list-style:none;}
@@ -165,9 +170,24 @@ figure:hover .ilustra-tela{opacity:unset; transition: unset;}
 .cards-ilustrado figure{width: 35%; float: right}
 .cards-ilustrado figure .shadow{box-shadow: 0 0 0 0}
 .cards-ilustrado .truncate{-webkit-line-clamp: 3;}
-
+.container-videos{width: 100%;margin: 0 auto;}
+.video{height:auto;}
+.por-categoria ul figure{width: 50%; height: 100%; float:left; margin: 0 10px 0 0}
+.por-categoria ul li{height: 150px;}
+.recentes{display: none;}
+.por-categoria ul li .fa{display:block; z-index:10; opacity: .8}
+}
+@media only screen and (width: 375px) { /*iphone 6*/
+.por-categoria ul li .fa{left: 16%;}
 }
 @media only screen and (width: 320px) {
 .header {padding: 25px;}
 .header h1{font-size:1.8em;}
+.por-categoria ul figure{width: 60%; height: 80%;}
+.por-categoria ul li .fa{left: 16%; top: 25%}
+}
+
+@media screen and (max-width: 736px) and (orientation:landscape) {
+  .video{width: 80%; height:300px !important; margin: 0 auto}
+  .por-categoria ul li{width: 50% !important; float:left !important}
 }
