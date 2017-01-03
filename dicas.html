@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="container">
-    <ol class="lista-manual">
+    <ol class="listagem-padrao">
       <li>
         <span>
           <i class="fa fa-comment"></i>
@@ -45,9 +45,9 @@
   </div>
   <script>
   $(function() {
-    $(".lista-manual > *").click(function() {
+    $(".listagem-padrao > *").click(function() {
       $(".active > .itens-manual").slideUp("fast");
-      $(".lista-manual > *").removeClass("active");
+      $(".listagem-padrao > *").removeClass("active");
       $(this).addClass("active");
       $(".active > .itens-manual").slideDown("fast");
     });
