@@ -38,7 +38,7 @@ h2{color: #7c7c3f;}
 .header h1{font-size:2.5em; color:#7c7c3f;}
 .header h2{margin:10px 0;}
 .header .form-group{width:50%; margin: 0 auto; position: relative;}
-.header .form-group .fa{font-size: 1.2em; color:#999; position: absolute; bottom:-10px; right:0}
+.header .form-group .fa{font-size: 1.2em; color:#999; position: absolute; bottom:-10px; right:0; cursor:pointer;}
 .boletins .header, .processos .header{margin-bottom:20px;}
 
 /** listagem padrão **/
@@ -52,7 +52,7 @@ h2{color: #7c7c3f;}
 .listagem-padrao .data-download{font-size:.9em; letter-spacing: 0; font-weight: normal}
 
 /** manual íntegra **/
-.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0; position:relative; }
+.conteudo-manual{background:#FFF; padding: 20px; margin:20px 0 20px 0; position:relative; width: 100%;}
 .conteudo-manual figure{width: 100%; margin: 0 0 10px 0;}
 .conteudo-manual figure .ilustra-tela{width: 100%;}
 .manual section {border-right: 1px solid #CCC;}
@@ -67,7 +67,7 @@ h2{color: #7c7c3f;}
 
 /* cards */
 .cards{padding:20px; max-height:210px; position: relative;}
-.cards-ilustrado{max-height:381px;}
+.cards-ilustrado{height:381px;}
 .detail{position: absolute; border-bottom:3px solid #7c7c3f; bottom: 0; left:0px; display:block; width: 0%; transition: .2s}
 .box-help:hover, .cards:hover{box-shadow:0 1px 5px #888888; transition: .4s}
 .box-help:hover .detail, .cards:hover .detail{width: 100%; transition: .4s;}
