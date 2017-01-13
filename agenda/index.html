@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="css/bootstrap-clockpicker.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
+  <script src="js/bootstrap-clockpicker.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Bem-vindo à agenda do Maestro</h1>
+    <div class="form-group">
+      <select class="form-control">
+        <optgroup>
+          <option value="" selected disabled>Selecionar agenda</option>
+          <option value="Felipe Ranieri">Felipe Ranieri</option>
+          <option value="Operação">Operação</option>
+          <option value="Agendamento de salas">Agendamento de salas</option>
+        </optgroup>
+      </select>
+    </div>
+    <p class="data">Terça-feira Dia 10 de Janeiro de 2017</p>
+  </div>
+
+  <div class="container-fluid">
+    <aside class="col-sm-2 col-lg-2">
+      <button type="button" name="button" class="btn btn-default" data-toggle="modal" data-target="#criacompromissomodal">Criar compromisso</button>
+      <table class="cal shadow2">
+        <tbody>
+          <tr class="semana">
+            <td align="center" width="14.3%">Dom</td>
+            <td align="center" width="14.3%">Seg</td>
+            <td align="center" width="14.3%">Ter</td>
+            <td align="center" width="14.3%">Qua</td>
+            <td align="center" width="14.3%">Qui</td>
+            <td align="center" width="14.3%">Sex</td>
+            <td align="center" width="14.3%">Sáb</td>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>02</td>
+            <td>03</td>
+            <td>04</td>
+            <td>05</td>
+            <td>06</td>
+            <td>07</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td>09</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+  </div>
+
+
+  <div class="modal fade" id="criacompromissomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h2>Criar compromisso:</h2>
+          <div class="form-group">
+            <select class="form-control" name="">
+              <optgroup>
+                <option value="0" selected disabled>Compromisso padrão</option>
+                <option></option>
+              </optgroup>
+            </select>
+            <div class="input-group col-sm-6">
+              <input type="text" id="data" class="form-control datepicker" placeholder="Informe a data">
+              <!-- <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span> -->
+            </div>
+            <div class="input-group clockpicker col-sm-6" data-placement="bottom" data-align="top" data-autoclose="true">
+              <input type="text" class="form-control" placeholder="Informe o horário">
+              <!-- <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-time"></span>
+              </span> -->
+            </div>
+            <input type="text" class="form-control" placeholder="Informe o compromisso">
+
+            <textarea class="form-control" placeholder="Informe os detalhes do compromisso"></textarea>
+
+            <select class="form-control" name="">
+              <option value="1" disabled selected>Informe a empresa</option>
+              <optgroup label="Empresas disponíveis">
+                <option value="2">AGE Technology</option>
+                <option value="">Teste integração</option>
+              </optgroup>
+            </select>
+
+            <select class="form-control" name="">
+              <option value="1" disabled selected>Informe o projeto</option>
+              <optgroup label="Projetos disponíveis">
+                <option value="2">Guia de encaminhamento de exames</option>
+                <option value="3">Teste integração</option>
+              </optgroup>
+            </select>
+
+            <select class="form-control" name="">
+              <option value="1" disabled selected>Informe a atividade</option>
+              <optgroup label="Lista de atividades">
+                <option value="2">Desenvolvimento</option>
+                <option value="3">Reunião</option>
+              </optgroup>
+            </select>
+
+            <div class="input-group col-sm-6">
+              <input type="text" class="form-control nr-processo" placeholder="Número do processo">
+              <i class="fa fa-search"></i>
+            </div>
+
+            <div class="input-group clockpicker col-sm-6" data-placement="top" data-align="top" data-autoclose="true">
+              <input type="text" class="form-control" placeholder="Informe a duração">
+            </div>
+
+            <!-- accordion estrutura padrão -->
+            <div>
+              <h3 class="accordion">
+                <i class="fa fa-sort-desc"></i>
+                Mais opções:
+              </h3>
+              <div class="content-accordion">
+                <label>Escolha a cor do compromisso:</label>
+                <div class="cores-compromisso">
+                  <div class="cor-compromisso divCorMaestro">
+                    <input type="radio" name="coresCompromisso" value="4F4F28">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorAzul">
+                    <input type="radio" name="coresCompromisso" value="003399">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorVerde">
+                    <input type="radio" name="coresCompromisso" value="32CD32">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorRoxo">
+                    <input type="radio" name="coresCompromisso" value="6A5ACD">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorVermelho">
+                    <input type="radio" name="coresCompromisso" value="FF0000">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorOuro">
+                    <input type="radio" name="coresCompromisso" value="FFD700">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorLaranja">
+                    <input type="radio" name="coresCompromisso" value="FF8C00">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorRosa">
+                    <input type="radio" name="coresCompromisso" value="C71585">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <div class="cor-compromisso divCorCinza">
+                    <input type="radio" name="coresCompromisso" value="CDCDC1">
+                    <i class="fa fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br clear="all">
+      </div>
+    </div>
+  </div>
+
+  <script>
+  $('.datepicker').datepicker({
+    format: "dd/mm/yyyy",
+    autoclose: true,
+    todayHighlight:true,
+    language: "pt-BR"
+  });
+  $('.clockpicker').clockpicker();
+
+  $(function() {
+    $(".accordion").click(function() {
+    	if($(this).parent("div").hasClass("active")){
+        $(this).children(".fa").removeClass("arrow-active");
+    		$(".active > .content-accordion").slideUp("fast");
+    		$(this).parent("div").removeClass("active");
+    	}else{
+    		$(".active > .content-accordion").slideUp("fast");
+    		$(".accordion").parent("div").removeClass("active");
+    		$(this).parent("div").addClass("active");
+        $(this).children(".fa").addClass("arrow-active");
+    		$(".active > .content-accordion").slideDown("fast");
+    	}
+    });
+    $(".cor-compromisso > input").click(function(){
+      var classe = $(this).parent().attr("class"),
+          check = $(this).parent().children(".fa"),
+          corCheck = $(this).val();
+
+      // if($(this).parent().hasClass(classe+"-active")){
+      //   $(this).parent().removeClass(classe+"-active");
+      //   check.hide("fast");
+      // } else if(classe.slice(-7) == "-active"){
+      //   var resetaClasse = $(".cor-compromisso > input").attr("class").substring(-7);
+      //   $(this).attr("class", resetaClasse);
+      //   check.hide("fast");
+      // } else{
+        $(this).parent().addClass(classe+"-active");
+        check.css("color", "#"+corCheck);
+        check.show("fast");
+      //}
+//      alert(classe.slice(-7));
+    });
+  });
+
+  </script>
+
+</body>
+</html>

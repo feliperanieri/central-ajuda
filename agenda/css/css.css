@@ -1,0 +1,196 @@
+body{margin:0; padding:0; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+a, a:hover{color:#4a4a4a}
+ul, ol{list-style: none;}
+abbr{text-decoration: none !important; border: none !important; cursor: inherit !important}
+.form-control::-webkit-input-placeholder{color:#000}
+.form-control::-moz-placeholder{color:#000}
+.form-control:-ms-input-placeholder{color:#000}
+.clearfix{clear:both;}
+.truncate{
+  display: block; /* non-webkit style */
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fl{float:left;}
+.fr{float:right;}
+.shadow{box-shadow:0 1px 5px #888888;}
+.shadow2{box-shadow:2px 5px 5px #DDD;}
+.upper{text-transform: uppercase;}
+.lower{text-transform: lowercase;}
+.data{position: absolute; top:10px; right:10px;}
+.btn-default:focus, .btn-default:active{background:#FFF}
+.btn-default:hover{background: #7c7c3f; color: #FFF; transition: .3s}
+.fa{float:left; margin: 0; font-size:1.5em; color:#7c7c3f;}
+.input-group[class*=col-] {float: left;padding-right: 0;padding-left: 0;}
+.input-group[class*=col-]:nth-of-type(2) input,
+.input-group[class*=col-]:nth-of-type(4) input {float: right;}
+.input-group[class*=col-] input{width: 98%}
+.input-group[class*=col-] input.nr-processo{width:80%}
+.input-group[class*=col-] .fa{float:right; font-size: 1.6em; margin:3px 23px 0 0; padding:0;}
+
+h1, h2, h3{color: #7c7c3f;}
+h3{font-size:1.2em;}
+
+.header{position: relative; border-bottom:1px solid #CCC; margin:0 0 20px 0; padding:0; /*background:linear-gradient(#FFF, #f0f0f0); background:#f0f0f0;*/}
+.header h1{font-size:1.5em; margin:10px; float:left;}
+.header .form-group{position:relative; top:5px;}
+.header .form-group .form-control{margin:5px 0 0 0; width: auto;}
+.header .form-group select option:disabled {color: #CCC;}
+
+.container-fluid{}
+.container-fluid aside{margin: 0; padding: 0;}
+.cal{width:100%; border:1px solid #CCC; border-radius:5px; border-collapse: separate; font-size:.9em; padding:5px; margin:10px 0 0 0}
+.cal th td, .cal tr td{text-align:center;}
+
+/** modal **/
+.modal h2{font-size: 1.5em}
+.modal .input-group, .modal .form-control{margin-bottom:10px;}
+.modal .input-group .form-control{border-radius: 4px; margin-bottom:0px;}
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active {
+ background-color: rgba(0,149,221,.25) !important;
+ color:#000 !important;
+}
+.modal h3{
+  cursor: pointer;
+}
+
+.accordion .fa {
+    font-size: 1.5em;
+    margin: -4px 10px 0 0;
+    padding: 0;
+    transform: rotate(-90deg);
+}
+.accordion .fa.arrow-active {
+    margin: -8px 5px 0 5px;
+    transform: rotate(0deg);
+}
+
+.cores-compromisso{
+  float:left;
+  margin-left:10px;
+}
+.cor-compromisso{
+  cursor:pointer;
+	width: 20px;
+	height: 20px;
+	float: left;
+  text-align: center;
+  position: relative;
+}
+.cor-compromisso input{
+  opacity:0;
+  cursor:pointer;
+}
+.cor-compromisso .fa{position: absolute; top:0; left:0; display:none;}
+.divCorAzul{
+	background-color: #003399;
+}
+.divCorAzul-active{
+  background-color: rgba(0, 51, 153, .25);
+}
+.divCorVermelho{
+	background-color: #FF0000;
+}
+.divCorVermelho-active{
+	background-color: rgba(255, 0, 0, .25);
+}
+.divCorVerde{
+	background-color: #32CD32;
+}
+.divCorVerde-active{
+  background-color: rgba(50, 205, 50, .25);
+}
+.divCorRoxo{
+  background-color: #6A5ACD;
+}
+.divCorRoxo-active{
+  background-color: rgba(106, 90, 205, .25);
+}
+.divCorOuro{
+	background-color: #FFD700;
+}
+.divCorOuro-active{
+  background-color: rgba(255, 215, 0, .25);
+}
+.divCorLaranja{
+	background-color: #FF8C00;
+}
+.divCorLaranja-active{
+	background-color: rgba(255, 140, 0, .25);
+}
+.divCorCinza{
+	background-color: #CDCDC1;
+}
+.divCorCinza-active{
+	background-color: rgba(205, 205, 193, .25);
+}
+
+.divCorRosa{
+  background-color: #C71585;
+}
+.divCorRosa-active{
+  background-color: rgba(199, 21, 133, .25);
+}
+
+.divCorMaestro{
+	background-color: #4F4F28;
+}
+.divCorMaestro-active{
+	background-color: rgba(79, 79, 40, .25);
+}
+
+/** accordion **/
+.content-accordion{display: none;}
+.content-accordion label{font-weight:normal; font-size:1em;}
+.content-accordion label:nth-of-type(1){float: left;}
+
+/** fab button **/
+.fab-container {
+    margin: 1em;
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    display: none
+  }
+.fab:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.top {
+    background: #7c7c3f url(up.svg) center no-repeat;
+}
+.fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+@media only screen and (width: 1024px) {
+h2{font-size:1.5em}
+}
+@media only screen and (width: 768px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (width: 375px) { /*iphone 6*/
+
+}
+@media only screen and (width: 320px) {
+}
+
+@media screen and (max-width: 736px) and (orientation:landscape) {
+
+}
